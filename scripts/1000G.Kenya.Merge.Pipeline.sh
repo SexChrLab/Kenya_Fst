@@ -199,8 +199,7 @@ plink --bfile ${mergedir}${mergestm}.autos.pass2.geno0.05.LDpruned-${LDPRN1}-${L
 plink --bfile ${mergedir}${mergestm}.Xchr.pass2.geno0.05.LDpruned-${LDPRN1}-${LDPRN2}-${LDPRN3} --keep ${KEEPFIL} --make-bed --out ${mergedir}${mergestm}.Xchr.pass2.geno0.05.LDpruned-${LDPRN1}-${LDPRN2}-${LDPRN3}.AFRpops
 
 #-------------------------------------------------------------------------------
-# PCA and ADMIXTURE
-# possibly in snakefile for ADMIXTURE
+# PCA #
 ##########
 # Step 8 #
 ##########
@@ -305,3 +304,20 @@ smartpca -p ${pcadirxchrall}${mergestm}.Xchr.pass2.geno0.05.LDpruned-${LDPRN1}-$
 
 # Afr X chromsome #
 smartpca -p ${pcadirxchrafr}${mergestm}.Xchr.pass2.geno0.05.LDpruned-${LDPRN1}-${LDPRN2}-${LDPRN3}.AFRpops.par
+
+###########
+# Step 11 #
+###########
+# Fix evec output for plotting
+awk '{{if($1 == "\t" ) {{print $2,"\t",$3,"\t",$4,"\t",$5,"\t",$6,"\t",$7,"\t",$8,"\t",$9,"\t",$10,"\t",$11,"\t",$12,"\t",$13,"\t"}} else {{print $1,"\t",$2,"\t",$3,"\t",$4,"\t",$5,"\t",$6,"\t",$7,"\t",$8,"\t",$9,"\t",$10,"\t",$11,"\t",$12,"\t"}}}}' ${pcadirautoall}${mergestm}.autos.pass2.geno0.05.LDpruned-${LDPRN1}-${LDPRN2}-${LDPRN3}.evec > ${pcadirautoall}${mergestm}.autos.pass2.geno0.05.LDpruned-${LDPRN1}-${LDPRN2}-${LDPRN3}.FIX.evec
+awk '{{if($1 == "\t" ) {{print $2,"\t",$3,"\t",$4,"\t",$5,"\t",$6,"\t",$7,"\t",$8,"\t",$9,"\t",$10,"\t",$11,"\t",$12,"\t",$13,"\t"}} else {{print $1,"\t",$2,"\t",$3,"\t",$4,"\t",$5,"\t",$6,"\t",$7,"\t",$8,"\t",$9,"\t",$10,"\t",$11,"\t",$12,"\t"}}}}' ${pcadirautoafr}${mergestm}.autos.pass2.geno0.05.LDpruned-${LDPRN1}-${LDPRN2}-${LDPRN3}.AFRpops.evec > ${pcadirautoafr}${mergestm}.autos.pass2.geno0.05.LDpruned-${LDPRN1}-${LDPRN2}-${LDPRN3}.AFRpops.FIX.evec
+awk '{{if($1 == "\t" ) {{print $2,"\t",$3,"\t",$4,"\t",$5,"\t",$6,"\t",$7,"\t",$8,"\t",$9,"\t",$10,"\t",$11,"\t",$12,"\t",$13,"\t"}} else {{print $1,"\t",$2,"\t",$3,"\t",$4,"\t",$5,"\t",$6,"\t",$7,"\t",$8,"\t",$9,"\t",$10,"\t",$11,"\t",$12,"\t"}}}}' ${pcadirxchrall}${mergestm}.Xchr.pass2.geno0.05.LDpruned-${LDPRN1}-${LDPRN2}-${LDPRN3}.evec > ${pcadirxchrall}${mergestm}.Xchr.pass2.geno0.05.LDpruned-${LDPRN1}-${LDPRN2}-${LDPRN3}.FIX.evec
+awk '{{if($1 == "\t" ) {{print $2,"\t",$3,"\t",$4,"\t",$5,"\t",$6,"\t",$7,"\t",$8,"\t",$9,"\t",$10,"\t",$11,"\t",$12,"\t",$13,"\t"}} else {{print $1,"\t",$2,"\t",$3,"\t",$4,"\t",$5,"\t",$6,"\t",$7,"\t",$8,"\t",$9,"\t",$10,"\t",$11,"\t",$12,"\t"}}}}' ${pcadirxchrafr}${mergestm}.Xchr.pass2.geno0.05.LDpruned-${LDPRN1}-${LDPRN2}-${LDPRN3}.AFRpops.evec > ${pcadirxchrafr}${mergestm}.Xchr.pass2.geno0.05.LDpruned-${LDPRN1}-${LDPRN2}-${LDPRN3}.AFRpops.FIX.evec
+
+###########
+# Step 12 #
+###########
+# TO DO
+# Add plotting R script here
+
+source deactivate genetic_diff_kenya
