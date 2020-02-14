@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -n 4
+#SBATCH -n 2
 #SBATCH --job-name=1000G.Kenya.Merge.Pipeline
 #SBATCH -t 2-0:0
 #SBATCH -o slurm.1000G.Kenya.Merge.Pipeline.out
@@ -30,6 +30,8 @@ vcfautoprx="ALL.chr"
 vcfautosfx=".phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes"
 # 1000 genomes X chromosome file name
 vcfxchr="ALL.chrX.phase3_shapeit2_mvncall_integrated_v1b.20130502.genotypes"
+# Related samples file
+relatedsmpls="20140625_related_individuals.txt"
 # 1000 genomes processed output
 outdirprocessed="/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/02_analyses/04_1000G_Kenya/processed_files/1000genomes/"
 # 1000 genomes merge list
@@ -80,12 +82,15 @@ awk '{ if($1 == 23) {print "X","\t",$4} }' ${kenyadirxchr}${kenyastemxchr}.map >
 # 2.c Merge all the autosomes together into one plink file
 # 2.d Minor allele frequency filter
 
+# get sample list of related 1000 genomes indivuals
+cut -f1 ${vcfdir}${relatedsmpls} | grep -v Sample > ${outdirlist}related_samples_1000genomes.txt
+
 # Autosomes #
 rm ${outdirprocessed}${automergelist}
 touch ${outdirprocessed}${automergelist}
 for i in {1..22}
 do
-  vcftools --gzvcf ${vcfdir}${vcfautoprx}${i}${vcfautosfx}.vcf.gz --positions ${outdirlist}${kenyastemauto}.chr${i}.pos.txt --recode --stdout | bgzip -c > ${outdirprocessed}${vcfautoprx}${i}${vcfautosfx}.arraySites.vcf.gz
+  vcftools --gzvcf ${vcfdir}${vcfautoprx}${i}${vcfautosfx}.vcf.gz --positions ${outdirlist}${kenyastemauto}.chr${i}.pos.txt --remove ${outdirlist}related_samples_1000genomes.txt --recode --stdout | bgzip -c > ${outdirprocessed}${vcfautoprx}${i}${vcfautosfx}.arraySites.vcf.gz
   zcat ${outdirprocessed}${vcfautoprx}${i}${vcfautosfx}.arraySites.vcf.gz | grep -v '^#' | cut -f 3 | sort | uniq -d> ${outdirprocessed}${vcfautoprx}${i}${vcfautosfx}.arraySites.dups
   plink --vcf ${outdirprocessed}${vcfautoprx}${i}${vcfautosfx}.arraySites.vcf.gz --biallelic-only strict --exclude ${outdirprocessed}${vcfautoprx}${i}${vcfautosfx}.arraySites.dups --make-bed --out ${outdirprocessed}${vcfautoprx}${i}${vcfautosfx}.arraySites.biallelic
   echo "${outdirprocessed}${vcfautoprx}${i}${vcfautosfx}.arraySites.biallelic" >> ${outdirprocessed}${automergelist}
