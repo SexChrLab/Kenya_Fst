@@ -1,0 +1,46 @@
+{
+  "kenya_array_file_dir": "/mnt/storage/SAYRES/Northwest_Kenya/data/snp_array/plink_files/melisa_wilson/",
+  "kenya_array_file_stem_name": ["melissa_wilson.raw"],
+  "scratchdir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/",
+  "srptdir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/scripts/",
+
+  "geno_filters": ["0.05"],
+  "HWE_filters": ["1e-50"],
+  "MAF_filters": ["0.05"],
+  "LDwindow":["50"],
+  "LDstep":["10"],
+  "LDr2":["0.2"],
+
+  "sex_info_file": "/home/amtarave/projects/Kenya_Fst/lists/sampleInfo/self_reported_sex_info.txt",
+  "sex_descrepencies_file": "/home/amtarave/projects/Kenya_Fst/lists/indRemoveLists/samplesSexDiscrepencies.txt",
+  "sex_descrepencies_related_indv_file": "/home/amtarave/projects/Kenya_Fst/lists/indRemoveLists/samplesAllRm.txt",
+  "related_indv_file": "/home/amtarave/projects/Kenya_Fst/lists/indRemoveLists/samplesRelatedIdentical.txt",
+
+  "sex_info_file_males": "/home/amtarave/projects/genetic_diff_northern_kenya/self_reported_sex_info_Males",
+  "male_X_het_sites": "/home/amtarave/projects/genetic_diff_northern_kenya/male_Xchr_het_site_IDs.txt",
+
+  "geno_filters_postQC": ["0.15", "0.10", "0.05", "0.01", "0"],
+  "HWE_filters_postQC": ["1e-50"],
+  "MAF_filters_postQC": ["0.05"],
+  "LDwindow_postQC":["50"],
+  "LDstep_postQC":["10"],
+  "LDr2_postQC":["0.1", "0.2", "0.3"],
+
+  "chromosomes": ["1-22", "23"],
+
+  "pop_combos": ["ALL_relateds_removed", "ALL_FEMALES_relateds_removed", "ALL_MALES_relateds_removed"],
+  "plink_keep_lists_pops_dir": "/home/amtarave/projects/genetic_diff_northern_kenya/sample_lists/plink_keep_lists/",
+  "r_list_dir": "/home/amtarave/projects/genetic_diff_northern_kenya/sample_lists/r_script_lists/",
+
+  "clan_combos": ["BORANA_ALL_relateds_removed", "BORANA_FEMALES_relateds_removed", "BORANA_MALES_relateds_removed",
+                  "RENDILLE_ALL_relateds_removed", "RENDILLE_FEMALES_relateds_removed", "RENDILLE_MALES_relateds_removed",
+                  "SAMBURU_ALL_relateds_removed", "SAMBURU_FEMALES_relateds_removed", "SAMBURU_MALES_relateds_removed",
+                  "TURKANA_ALL_relateds_removed", "TURKANA_FEMALES_relateds_removed", "TURKANA_MALES_relateds_removed"],
+  "culture_clan_combos":[""],
+  "plink_keep_lists_Cultclans_dir": "/home/amtarave/projects/genetic_diff_northern_kenya/sample_lists/plink_keep_lists_major_cultClans/",
+  "r_list_dir_culture_clan": "/home/amtarave/projects/genetic_diff_northern_kenya/sample_lists/r_script_lists_major_cultClans/",
+  "blood_clan_combos":[""],
+  "plink_keep_lists_Bloodclans_dir": "/home/amtarave/projects/genetic_diff_northern_kenya/sample_lists/plink_keep_lists_major_clans/",
+  "r_list_dir_blood_clan": "/home/amtarave/projects/genetic_diff_northern_kenya/sample_lists/r_script_lists_major_clans/"
+
+}
