@@ -83,7 +83,8 @@ awk '{ if($1 == 23) {print "X","\t",$4} }' ${kenyadirxchr}${kenyastemxchr}.map >
 # 2.d Minor allele frequency filter
 
 # get sample list of related 1000 genomes indivuals
-cut -f1 ${vcfdir}${relatedsmpls} | grep -v Sample > ${outdirlist}related_samples_1000genomes.txt
+#cut -f1 ${vcfdir}${relatedsmpls} | grep -v Sample > ${outdirlist}related_samples_1000genomes.txt
+cut -f2 -d':' ${vcfdir}${relatedsmpls} | grep -v Sample | sed 's/\,/\n/g' > ${outdirlist}related_samples_1000genomes.txt
 
 # Autosomes #
 rm ${outdirprocessed}${automergelist}
