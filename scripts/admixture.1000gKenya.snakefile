@@ -38,7 +38,7 @@ rule admixture_autos:
     shell:
         """
         cd {params.outpath}
-        admixture -s time --haploid="male:23" --cv {input.bedfile} {params.kval} | tee {output.outlog}
+        admixture -s time --cv {input.bedfile} {params.kval} | tee {output.outlog}
         """
 
 rule setMaleHetsMissing:
@@ -67,5 +67,5 @@ rule admixture_xchr:
     shell:
         """
         cd {params.outpath}
-        admixture -s time --cv {input.bedfile} {params.kval} | tee {output.outlog}
+        admixture -s time --haploid="male:23" --cv {input.bedfile} {params.kval} | tee {output.outlog}
         """
