@@ -7,11 +7,11 @@
 #SBATCH --mail-user=amtarave@asu.edu # send-to address
 
 source activate genetic_diff_kenya
-cd ~/projects/genetic_diff_northern_kenya/projectSnakemake/
+cd /scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/scripts
 
 snakemake -s initialQCKenyaPipeline.snakefile --dag | dot -Tsvg > initialQCKenyaPipeline.svg
-snakemake -s initialQCKenyaPipeline.snakefile -j 20 --cluster "sbatch -n 2 -t 48:00:00 --mem-per-cpu=16000 --mail-type=END,FAIL --mail-user=amtarave@asu.edu"
+snakemake -s initialQCKenyaPipeline.snakefile -j 2 --cluster "sbatch -n 2 -t 48:00:00 --mem-per-cpu=16000 --mail-type=END,FAIL --mail-user=amtarave@asu.edu"
 
-mv slurm* logs/
+#mv slurm* logs/
 
 source deactivate genetic_diff_kenya

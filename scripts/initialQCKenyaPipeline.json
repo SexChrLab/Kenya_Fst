@@ -15,6 +15,7 @@
   "sex_descrepencies_file": "/home/amtarave/projects/Kenya_Fst/lists/indRemoveLists/samplesSexDiscrepencies.txt",
   "sex_descrepencies_related_indv_file": "/home/amtarave/projects/Kenya_Fst/lists/indRemoveLists/samplesAllRm.txt",
   "related_indv_file": "/home/amtarave/projects/Kenya_Fst/lists/indRemoveLists/samplesRelatedIdentical.txt",
+  "DNA_concentrations": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/lists/other/DNA.conc.per.ind.txt",
 
   "sex_info_file_males": "/home/amtarave/projects/genetic_diff_northern_kenya/self_reported_sex_info_Males",
   "male_X_het_sites": "/home/amtarave/projects/genetic_diff_northern_kenya/male_Xchr_het_site_IDs.txt",
