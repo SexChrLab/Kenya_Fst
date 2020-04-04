@@ -1,0 +1,557 @@
+{
+  "scripts_dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/scripts",
+
+  "out_dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis",
+
+  "outliers": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/lists/outliers",
+
+  "outliersNgibochoros": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/lists/Ngibochoros.samples.relatedsRemoved.outliersRmed",
+
+  "keep_dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/lists/fst_lists",
+
+  "fst_groups1": [
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved"
+
+  ],
+
+  "fst_groups2": [
+    "rendille.all.relatedsRemoved", "samburu.all.relatedsRemoved", "turkana.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved", "turkana.all.relatedsRemoved",
+    "turkana.all.relatedsRemoved",
+
+    "rendille.all.relatedsRemoved", "samburu.all.relatedsRemoved", "turkana.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved", "turkana.all.relatedsRemoved",
+    "turkana.all.relatedsRemoved",
+
+    "rendille.all.relatedsRemoved", "samburu.all.relatedsRemoved", "turkana.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved", "turkana.all.relatedsRemoved",
+    "turkana.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+
+    "borana.all.relatedsRemoved", "borana.all.relatedsRemoved", "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved", "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved"
+  ],
+
+  "chr_sex_options_full_12": [
+    "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+
+    "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+
+    "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+
+    "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES", "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES", "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES", "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES",
+
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL", "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL", "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL", "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL",
+
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES", "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES", "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES", "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES",
+
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES", "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES", "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES", "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES"
+
+  ],
+
+  "fst_groupsBC1" : [
+    "Ldupsai.bloodClan.rendille.all.relatedsRemoved",
+    "Ldupsai.bloodClan.rendille.all.relatedsRemoved",
+    "Ldupsai.bloodClan.rendille.all.relatedsRemoved",
+    "Ldupsai.bloodClan.rendille.all.relatedsRemoved",
+    "Ldupsai.bloodClan.rendille.all.relatedsRemoved",
+    "Ldupsai.bloodClan.rendille.all.relatedsRemoved",
+    "Ldupsai.bloodClan.rendille.all.relatedsRemoved",
+    "Ldupsai.bloodClan.rendille.all.relatedsRemoved",
+    "Ldupsai.bloodClan.rendille.all.relatedsRemoved",
+    "Ldupsai.bloodClan.rendille.all.relatedsRemoved",
+
+    "Nonituu.bloodClan.borana.all.relatedsRemoved",
+    "Nonituu.bloodClan.borana.all.relatedsRemoved",
+    "Nonituu.bloodClan.borana.all.relatedsRemoved",
+    "Nonituu.bloodClan.borana.all.relatedsRemoved",
+    "Nonituu.bloodClan.borana.all.relatedsRemoved",
+    "Nonituu.bloodClan.borana.all.relatedsRemoved",
+    "Nonituu.bloodClan.borana.all.relatedsRemoved",
+    "Nonituu.bloodClan.borana.all.relatedsRemoved",
+    "Nonituu.bloodClan.borana.all.relatedsRemoved",
+    "Nonituu.bloodClan.borana.all.relatedsRemoved",
+
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved",
+
+    "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngipongaa.bloodClan.turkana.all.relatedsRemoved",
+    "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngipongaa.bloodClan.turkana.all.relatedsRemoved",
+    "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngipongaa.bloodClan.turkana.all.relatedsRemoved",
+    "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngipongaa.bloodClan.turkana.all.relatedsRemoved",
+    "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngipongaa.bloodClan.turkana.all.relatedsRemoved",
+    "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngipongaa.bloodClan.turkana.all.relatedsRemoved",
+    "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngipongaa.bloodClan.turkana.all.relatedsRemoved",
+    "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngipongaa.bloodClan.turkana.all.relatedsRemoved",
+    "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngipongaa.bloodClan.turkana.all.relatedsRemoved",
+    "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngidoca.bloodClan.turkana.all.relatedsRemoved", "Ngipongaa.bloodClan.turkana.all.relatedsRemoved"
+  ],
+
+  "fst_groupsBC2": [
+    "Saale.bloodClan.rendille.all.relatedsRemoved",
+    "Saale.bloodClan.rendille.all.relatedsRemoved",
+    "Saale.bloodClan.rendille.all.relatedsRemoved",
+    "Saale.bloodClan.rendille.all.relatedsRemoved",
+    "Saale.bloodClan.rendille.all.relatedsRemoved",
+    "Saale.bloodClan.rendille.all.relatedsRemoved",
+    "Saale.bloodClan.rendille.all.relatedsRemoved",
+    "Saale.bloodClan.rendille.all.relatedsRemoved",
+    "Saale.bloodClan.rendille.all.relatedsRemoved",
+    "Saale.bloodClan.rendille.all.relatedsRemoved",
+
+    "Warjidda.bloodClan.borana.all.relatedsRemoved",
+    "Warjidda.bloodClan.borana.all.relatedsRemoved",
+    "Warjidda.bloodClan.borana.all.relatedsRemoved",
+    "Warjidda.bloodClan.borana.all.relatedsRemoved",
+    "Warjidda.bloodClan.borana.all.relatedsRemoved",
+    "Warjidda.bloodClan.borana.all.relatedsRemoved",
+    "Warjidda.bloodClan.borana.all.relatedsRemoved",
+    "Warjidda.bloodClan.borana.all.relatedsRemoved",
+    "Warjidda.bloodClan.borana.all.relatedsRemoved",
+    "Warjidda.bloodClan.borana.all.relatedsRemoved",
+
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved",
+
+    "Ngipongaa.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved", "Ngisiger.bloodClan.turkana.all.relatedsRemoved"
+  ],
+
+  "fst_groupsCC1" : [
+    "Ldupsai.cultureClan.rendille.all.relatedsRemoved",
+    "Ldupsai.cultureClan.rendille.all.relatedsRemoved",
+    "Ldupsai.cultureClan.rendille.all.relatedsRemoved",
+    "Ldupsai.cultureClan.rendille.all.relatedsRemoved",
+    "Ldupsai.cultureClan.rendille.all.relatedsRemoved",
+    "Ldupsai.cultureClan.rendille.all.relatedsRemoved",
+    "Ldupsai.cultureClan.rendille.all.relatedsRemoved",
+    "Ldupsai.cultureClan.rendille.all.relatedsRemoved",
+    "Ldupsai.cultureClan.rendille.all.relatedsRemoved",
+    "Ldupsai.cultureClan.rendille.all.relatedsRemoved",
+
+    "Nonituu.cultureClan.borana.all.relatedsRemoved",
+    "Nonituu.cultureClan.borana.all.relatedsRemoved",
+    "Nonituu.cultureClan.borana.all.relatedsRemoved",
+    "Nonituu.cultureClan.borana.all.relatedsRemoved",
+    "Nonituu.cultureClan.borana.all.relatedsRemoved",
+    "Nonituu.cultureClan.borana.all.relatedsRemoved",
+    "Nonituu.cultureClan.borana.all.relatedsRemoved",
+    "Nonituu.cultureClan.borana.all.relatedsRemoved",
+    "Nonituu.cultureClan.borana.all.relatedsRemoved",
+    "Nonituu.cultureClan.borana.all.relatedsRemoved",
+
+    "Lpisikishu.cultureClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.cultureClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.cultureClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.cultureClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.cultureClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.cultureClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.cultureClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.cultureClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.cultureClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.cultureClan.samburu.all.relatedsRemoved",
+
+    "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngipongaa.cultureClan.turkana.all.relatedsRemoved",
+    "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngipongaa.cultureClan.turkana.all.relatedsRemoved",
+    "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngipongaa.cultureClan.turkana.all.relatedsRemoved",
+    "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngipongaa.cultureClan.turkana.all.relatedsRemoved",
+    "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngipongaa.cultureClan.turkana.all.relatedsRemoved",
+    "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngipongaa.cultureClan.turkana.all.relatedsRemoved",
+    "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngipongaa.cultureClan.turkana.all.relatedsRemoved",
+    "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngipongaa.cultureClan.turkana.all.relatedsRemoved",
+    "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngipongaa.cultureClan.turkana.all.relatedsRemoved",
+    "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngidoca.cultureClan.turkana.all.relatedsRemoved", "Ngipongaa.cultureClan.turkana.all.relatedsRemoved"
+  ],
+
+  "fst_groupsCC2": [
+    "Saale.cultureClan.rendille.all.relatedsRemoved",
+    "Saale.cultureClan.rendille.all.relatedsRemoved",
+    "Saale.cultureClan.rendille.all.relatedsRemoved",
+    "Saale.cultureClan.rendille.all.relatedsRemoved",
+    "Saale.cultureClan.rendille.all.relatedsRemoved",
+    "Saale.cultureClan.rendille.all.relatedsRemoved",
+    "Saale.cultureClan.rendille.all.relatedsRemoved",
+    "Saale.cultureClan.rendille.all.relatedsRemoved",
+    "Saale.cultureClan.rendille.all.relatedsRemoved",
+    "Saale.cultureClan.rendille.all.relatedsRemoved",
+
+    "Warjidda.cultureClan.borana.all.relatedsRemoved",
+    "Warjidda.cultureClan.borana.all.relatedsRemoved",
+    "Warjidda.cultureClan.borana.all.relatedsRemoved",
+    "Warjidda.cultureClan.borana.all.relatedsRemoved",
+    "Warjidda.cultureClan.borana.all.relatedsRemoved",
+    "Warjidda.cultureClan.borana.all.relatedsRemoved",
+    "Warjidda.cultureClan.borana.all.relatedsRemoved",
+    "Warjidda.cultureClan.borana.all.relatedsRemoved",
+    "Warjidda.cultureClan.borana.all.relatedsRemoved",
+    "Warjidda.cultureClan.borana.all.relatedsRemoved",
+
+    "Lukumai.cultureClan.samburu.all.relatedsRemoved",
+    "Lukumai.cultureClan.samburu.all.relatedsRemoved",
+    "Lukumai.cultureClan.samburu.all.relatedsRemoved",
+    "Lukumai.cultureClan.samburu.all.relatedsRemoved",
+    "Lukumai.cultureClan.samburu.all.relatedsRemoved",
+    "Lukumai.cultureClan.samburu.all.relatedsRemoved",
+    "Lukumai.cultureClan.samburu.all.relatedsRemoved",
+    "Lukumai.cultureClan.samburu.all.relatedsRemoved",
+    "Lukumai.cultureClan.samburu.all.relatedsRemoved",
+    "Lukumai.cultureClan.samburu.all.relatedsRemoved",
+
+    "Ngipongaa.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved", "Ngisiger.cultureClan.turkana.all.relatedsRemoved"
+  ],
+
+  "chr_sex_options_full_C12": [
+    "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES",
+
+    "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES",
+
+    "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES",
+
+    "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2", "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES", "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES", "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2", "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL", "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL", "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES", "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES", "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES", "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES", "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES"
+  ],
+
+
+  "chr_sex_options_full": [
+    "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES"
+  ],
+
+
+  "all_combos": [
+    "borana.all.relatedsRemoved",
+    "rendille.all.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+    "turkana.all.relatedsRemoved",
+
+    "Ldupsai.bloodClan.rendille.all.relatedsRemoved",
+    "Saale.bloodClan.rendille.all.relatedsRemoved",
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved",
+    "Ngidoca.bloodClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.bloodClan.turkana.all.relatedsRemoved",
+    "Ngisiger.bloodClan.turkana.all.relatedsRemoved",
+
+    "Ldupsai.cultureClan.rendille.all.relatedsRemoved",
+    "Saale.cultureClan.rendille.all.relatedsRemoved",
+    "Lpisikishu.cultureClan.samburu.all.relatedsRemoved",
+    "Lukumai.cultureClan.samburu.all.relatedsRemoved",
+    "Ngidoca.cultureClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.cultureClan.turkana.all.relatedsRemoved",
+    "Ngisiger.cultureClan.turkana.all.relatedsRemoved"
+
+  ],
+
+  "all_combos_1": [
+    "borana.all.relatedsRemoved",
+    "borana.females.relatedsRemoved",
+    "borana.males.relatedsRemoved",
+    "kwatela.BTS.all.relatedsRemoved",
+    "kwatela.BTS.females.relatedsRemoved",
+    "kwatela.BTS.males.relatedsRemoved",
+    "kwatela.CTS.all.relatedsRemoved",
+    "kwatela.CTS.females.relatedsRemoved",
+    "kwatela.CTS.males.relatedsRemoved",
+    "Ldupsai.bloodClan.rendille.all.relatedsRemoved",
+    "Ldupsai.bloodClan.rendille.females.relatedsRemoved",
+    "Ldupsai.bloodClan.rendille.males.relatedsRemoved",
+    "Ldupsai.cultureClan.rendille.all.relatedsRemoved",
+    "Ldupsai.cultureClan.rendille.females.relatedsRemoved",
+    "Ldupsai.cultureClan.rendille.males.relatedsRemoved",
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.bloodClan.samburu.females.relatedsRemoved",
+    "Lpisikishu.bloodClan.samburu.males.relatedsRemoved",
+    "Lpisikishu.cultureClan.samburu.all.relatedsRemoved",
+    "Lpisikishu.cultureClan.samburu.females.relatedsRemoved",
+    "Lpisikishu.cultureClan.samburu.males.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.females.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.males.relatedsRemoved",
+    "Lukumai.cultureClan.samburu.all.relatedsRemoved",
+    "Lukumai.cultureClan.samburu.females.relatedsRemoved",
+    "Lukumai.cultureClan.samburu.males.relatedsRemoved",
+    "Ngibochoros.BTS.all.relatedsRemoved",
+    "Ngibochoros.BTS.females.relatedsRemoved",
+    "Ngibochoros.BTS.males.relatedsRemoved",
+    "Ngibochoros.CTS.all.relatedsRemoved",
+    "Ngibochoros.CTS.females.relatedsRemoved",
+    "Ngibochoros.CTS.males.relatedsRemoved",
+    "Ngidoca.bloodClan.turkana.all.relatedsRemoved",
+    "Ngidoca.bloodClan.turkana.females.relatedsRemoved",
+    "Ngidoca.bloodClan.turkana.males.relatedsRemoved",
+    "Ngidoca.cultureClan.turkana.all.relatedsRemoved",
+    "Ngidoca.cultureClan.turkana.females.relatedsRemoved",
+    "Ngidoca.cultureClan.turkana.males.relatedsRemoved",
+    "Ngipongaa.bloodClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.bloodClan.turkana.females.relatedsRemoved",
+    "Ngipongaa.bloodClan.turkana.males.relatedsRemoved",
+    "Ngipongaa.cultureClan.turkana.all.relatedsRemoved",
+    "Ngipongaa.cultureClan.turkana.females.relatedsRemoved",
+    "Ngipongaa.cultureClan.turkana.males.relatedsRemoved",
+    "Ngisiger.bloodClan.turkana.all.relatedsRemoved",
+    "Ngisiger.bloodClan.turkana.females.relatedsRemoved",
+    "Ngisiger.bloodClan.turkana.males.relatedsRemoved",
+    "Ngisiger.cultureClan.turkana.all.relatedsRemoved",
+    "Ngisiger.cultureClan.turkana.females.relatedsRemoved",
+    "Ngisiger.cultureClan.turkana.males.relatedsRemoved",
+    "Ngiyapakuno.BTS.all.relatedsRemoved",
+    "Ngiyapakuno.BTS.females.relatedsRemoved",
+    "Ngiyapakuno.BTS.males.relatedsRemoved",
+    "Ngiyapakuno.CTS.all.relatedsRemoved",
+    "Ngiyapakuno.CTS.females.relatedsRemoved",
+    "Ngiyapakuno.CTS.males.relatedsRemoved",
+    "Nonituu.bloodClan.borana.all.relatedsRemoved",
+    "Nonituu.bloodClan.borana.females.relatedsRemoved",
+    "Nonituu.bloodClan.borana.males.relatedsRemoved",
+    "Nonituu.cultureClan.borana.all.relatedsRemoved",
+    "Nonituu.cultureClan.borana.females.relatedsRemoved",
+    "Nonituu.cultureClan.borana.males.relatedsRemoved",
+    "rendille.all.relatedsRemoved",
+    "rendille.females.relatedsRemoved",
+    "rendille.males.relatedsRemoved",
+    "Saale.bloodClan.rendille.all.relatedsRemoved",
+    "Saale.bloodClan.rendille.females.relatedsRemoved",
+    "Saale.bloodClan.rendille.males.relatedsRemoved",
+    "Saale.cultureClan.rendille.all.relatedsRemoved",
+    "Saale.cultureClan.rendille.females.relatedsRemoved",
+    "Saale.cultureClan.rendille.males.relatedsRemoved",
+    "samburu.all.relatedsRemoved",
+    "samburu.females.relatedsRemoved",
+    "samburu.males.relatedsRemoved",
+    "turkana.all.relatedsRemoved",
+    "turkana.females.relatedsRemoved",
+    "turkana.males.relatedsRemoved",
+    "Warjidda.bloodClan.borana.all.relatedsRemoved",
+    "Warjidda.bloodClan.borana.females.relatedsRemoved",
+    "Warjidda.bloodClan.borana.males.relatedsRemoved",
+    "Warjidda.cultureClan.borana.all.relatedsRemoved",
+    "Warjidda.cultureClan.borana.females.relatedsRemoved",
+    "Warjidda.cultureClan.borana.males.relatedsRemoved"
+  ],
+
+
+  "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2": {
+    "dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr1-22/ALL",
+    "fn_stem": "melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "dir_fn_stem": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr1-22/ALL/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2"
+  },
+
+  "chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2": {
+    "dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr1-22/MALES",
+    "fn_stem": "melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "dir_fn_stem": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr1-22/MALES/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr1-22.geno0.05.hwe1e-50.MALES.LD_50-10-0.2"
+
+  },
+
+  "chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2": {
+    "dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr1-22/FEMALES",
+    "fn_stem": "melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "dir_fn_stem": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr1-22/FEMALES/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr1-22.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2"
+  },
+
+  "chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES": {
+    "dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr24",
+    "fn_stem": "melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES",
+    "dir_fn_stem": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr24/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr24.setMaleHetsMissing.geno0.05.hwe1e-50.MALES"
+  },
+
+  "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2": {
+    "dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr23/ALL",
+    "fn_stem": "melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "dir_fn_stem": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr23/ALL/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2"
+  },
+
+  "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2": {
+    "dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr23/MALES",
+    "fn_stem": "melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2",
+    "dir_fn_stem": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr23/MALES/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr23.setMaleHetsMissing.geno0.05.hwe1e-50.MALES.LD_50-10-0.2"
+  },
+
+  "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2": {
+    "dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr23/FEMALES",
+    "fn_stem": "melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2",
+    "dir_fn_stem": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr23/FEMALES/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr23.setMaleHetsMissing.geno0.05.hwe1e-50.FEMALES.LD_50-10-0.2"
+  },
+
+  "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL": {
+    "dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr26/ALL",
+    "fn_stem": "melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr26.setHetsMissing.geno0.05.hwe1e-50.ALL",
+    "dir_fn_stem": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr26/ALL/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr26.setHetsMissing.geno0.05.hwe1e-50.ALL"
+  },
+
+  "chr26.setHetsMissing.geno0.05.hwe1e-50.MALES": {
+    "dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr26/MALES",
+    "fn_stem": "melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr26.setHetsMissing.geno0.05.hwe1e-50.MALES",
+    "dir_fn_stem": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr26/MALES/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr26.setHetsMissing.geno0.05.hwe1e-50.MALES"
+  },
+
+  "chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES": {
+    "dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr26/FEMALES",
+    "fn_stem": "melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES",
+    "dir_fn_stem": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/01_filtering_new/chr26/FEMALES/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr26.setHetsMissing.geno0.05.hwe1e-50.FEMALES"
+  }
+}
