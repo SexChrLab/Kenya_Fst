@@ -3,9 +3,9 @@
 
   "out_dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis",
 
-  "outliers": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/lists/outliers",
+  "outliers": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/lists/outliers.rmFile.txt",
 
-  "outliersNgibochoros": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/lists/Ngibochoros.samples.relatedsRemoved.outliersRmed",
+  "outliersNgibochoros": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/lists/Ngibochoros.samples.relatedsRemoved.outliersRmed.rmFile.txt",
 
   "keep_dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/lists/fst_lists",
 

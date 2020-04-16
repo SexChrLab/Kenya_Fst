@@ -1,0 +1,43 @@
+{
+  "scripts_dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/scripts",
+
+  "out_dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis",
+
+  "outliers": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/lists/outliers.rmFile.txt",
+
+  "outliersNgibochoros": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/lists/Ngibochoros.samples.relatedsRemoved.outliersRmed.rmFile.txt",
+
+  "fst_dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/lists/fst_lists",
+
+  "keep_dir": "/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/06_fst_permutations/permutation_sample_lists",
+
+  "sex": "females",
+
+  "chr_sex_options": [
+    "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2"
+  ],
+
+  "chr_sex_options_full": [
+    "chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2",
+    "chr26.setHetsMissing.geno0.05.hwe1e-50.ALL",
+  ],
+
+  "combos": [
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved.permutations.males",
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved.permutations.males"
+  ],
+
+  "combos_short": [
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved",
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved"
+  ],
+
+  "fst_groups1": [
+    "Lpisikishu.bloodClan.samburu.all.relatedsRemoved"
+  ],
+
+  "fst_groups2": [
+    "Lukumai.bloodClan.samburu.all.relatedsRemoved"
+  ]
+}
