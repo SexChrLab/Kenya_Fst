@@ -1,0 +1,20 @@
+{
+  "in_dir":"/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/02_analyses/04_1000G_Kenya/processed_files/merged/",
+
+  "auto_stems": [
+    "MERGED.Kenya.Array.1000G.MAF0.1.autos.pass2.geno0.05.LDpruned-50-10-0.2.Kenya.CEU.LWK"
+  ],
+  "x_stems":[
+     "MERGED.Kenya.Array.1000G.MAF0.1.Xchr.pass2.geno0.05.LDpruned-50-10-0.2.Kenya.CEU.LWK"
+   ],
+
+  "analysis_type": ["Kenya.CEU.LWK"],
+
+  "runs":["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+
+  "kvalues":["1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+    "11", "12"],
+
+  "output_dir_base":"/scratch/amtarave/genetic_diff_northern_kenya/00_New_analysis/02_analyses/04_1000G_Kenya/admixture/"
+
+}
