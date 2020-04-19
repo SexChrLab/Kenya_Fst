@@ -69,14 +69,19 @@ c1females = options.numf
 #nperm = 5
 nperm = options.nperm
 
-
+#l3 = [x for x in l1 if x not in l2]
+outliers = ['24_54_al', '120_465', '48_195_al', '40_199_al']
 # For each permutation, make a subsetted male list and subsetted female list
 # do the random.shuffle() on the whole list. Pull the top 12 (number from c1males)
 # for male list and remaining 7 (number from c1females) for female list
 permtot = int(nperm)+1
+
 for i in range(1,(permtot)):
     with open((fdir + c1fn)) as f:
-        lines = f.read().splitlines()
+        linesall = f.read().splitlines()
+        #print (lines)
+        lines = [x for x in linesall if x not in outliers] # this will remove the outliers from the original list prior to making permuted list
+        
         random.shuffle(lines)
 
         #outfile_1 = outdir + c1fn + ".permutations.males." + str(i) + ".txt"
@@ -94,7 +99,7 @@ for i in range(1,(permtot)):
         for line in males:
             newline_1 = line + "\n"
             outFile_1.write(newline_1)
-
+        
         for line in females:
             newline_2 = line + "\n"
             outFile_2.write(newline_2)
