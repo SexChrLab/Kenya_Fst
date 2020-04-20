@@ -1,6 +1,6 @@
 # Environment: genetic_diff_kenya
 
-configfile: "FstPermutations.config.2.json"
+configfile: "FstPermutations.config.Ngidoca.Ngipongaa.females.json" # make sure to chage this for each Fst combo calculation
 
 # Number of permutations to calculate Fst for
 totnumperm = 1000
@@ -12,9 +12,10 @@ rule all:
         expand(os.path.join(config["out_dir"], "06_fst_permutations/p_{permutenum}/{chr_sex_options}/frqs/{sex}/", "{combos_short}.permutation_{permutenum}.frq"), permutenum = numperm, chr_sex_options = config["chr_sex_options"], combos_short = config["combos_short"], sex = config["sex"]),
         expand(os.path.join(config["out_dir"], "06_fst_permutations/p_{permutenum}/{chr_sex_options}/fst/{sex}", "{fst_groups1}-{fst_groups2}.permutation_{permutenum}.Fst.table.txt"), permutenum = numperm, chr_sex_options = config["chr_sex_options"], fst_groups1 = config["fst_groups1"], fst_groups2 = config["fst_groups2"], sex = config["sex"]),
         expand(os.path.join(config["out_dir"], "06_fst_permutations/permutations_merged/all_separated/chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2/{sex}/", "{fst_groups1}-{fst_groups2}.permutation_{permutenum}.Fst.table.txt"), permutenum = numperm, fst_groups1 = config["fst_groups1"], fst_groups2 = config["fst_groups2"], sex = config["sex"]),
-        expand(os.path.join(config["out_dir"], "06_fst_permutations/permutations_merged/chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2/{sex}/", "{fst_groups1}-{fst_groups2}.permutations_merged.Fst.results.txt"), fst_groups1 = config["fst_groups1"], fst_groups2 = config["fst_groups2"], sex = config["sex"])
+        expand(os.path.join(config["out_dir"], "06_fst_permutations/permutations_merged/chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2/{sex}/", "{fst_groups1}-{fst_groups2}.permutations_merged.Fst.results.txt"), fst_groups1 = config["fst_groups1"], fst_groups2 = config["fst_groups2"], sex = config["sex"]),
         #expand(os.path.join(config["out_dir"], "06_fst_permutations/permutations_merged/chr23.setMaleHetsMissing.geno0.05.hwe1e-50.ALL.LD_50-10-0.2", "{fst_groups1}-{fst_groups2}.permutations_merged.Fst.results.txt"), fst_groups1 = config["fst_groups1"], fst_groups2 = config["fst_groups2"]),
-        #expand(os.path.join(config["out_dir"], "06_fst_permutations/permutations_merged/chr26.setHetsMissing.geno0.05.hwe1e-50.ALL", "{fst_groups1}-{fst_groups2}.permutations_merged.Fst.results.txt"), fst_groups1 = config["fst_groups1"], fst_groups2 = config["fst_groups2"])
+        #expand(os.path.join(config["out_dir"], "06_fst_permutations/permutations_merged/chr26.setHetsMissing.geno0.05.hwe1e-50.ALL", "{fst_groups1}-{fst_groups2}.permutations_merged.Fst.results.txt"), fst_groups1 = config["fst_groups1"], fst_groups2 = config["fst_groups2"]),
+        expand(os.path.join(config["out_dir"], "06_fst_permutations/permutations_merged/chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2/{sex}/", "{fst_groups1}-{fst_groups2}.permutations_merged.Fst.results.pdf"), fst_groups1 = config["fst_groups1"], fst_groups2 = config["fst_groups2"], sex = config["sex"])
 
 
 # Get allele frequencies for all samples for each population combination
@@ -28,7 +29,8 @@ rule getAlleleFrq:
         keep = os.path.join(config["keep_dir"], "{combos_short}", "{combos_short}.permutations.males.{permutenum}.txt"),
         outstm = os.path.join(config["out_dir"], "06_fst_permutations/p_{permutenum}/{chr_sex_options}/frqs/{sex}/", "{combos_short}.permutation_{permutenum}")
     output:
-        frq = os.path.join(config["out_dir"], "06_fst_permutations/p_{permutenum}/{chr_sex_options}/frqs/{sex}/", "{combos_short}.permutation_{permutenum}.frq")
+        #frq = os.path.join(config["out_dir"], "06_fst_permutations/p_{permutenum}/{chr_sex_options}/frqs/{sex}/", "{combos_short}.permutation_{permutenum}.frq")
+        temp(os.path.join(config["out_dir"], "06_fst_permutations/p_{permutenum}/{chr_sex_options}/frqs/{sex}/", "{combos_short}.permutation_{permutenum}.frq"))
     shell:
         "vcftools --vcf {input.vcf} --freq --keep {params.keep} --remove {params.smplsRm} --out {params.outstm}"
 
@@ -47,7 +49,7 @@ rule FstCalculation:
         frq2 = os.path.join(config["out_dir"], "06_fst_permutations/p_{permutenum}/{chr_sex_options}/frqs/{sex}/", "{fst_groups2}.permutation_{permutenum}.frq"),
         outdir = os.path.join(config["out_dir"], "06_fst_permutations/p_{permutenum}/{chr_sex_options}/fst/{sex}/")
     output:
-        os.path.join(config["out_dir"], "06_fst_permutations/p_{permutenum}/{chr_sex_options}/fst/{sex}/", "{fst_groups1}-{fst_groups2}.permutation_{permutenum}.Fst.table.txt")
+        temp(os.path.join(config["out_dir"], "06_fst_permutations/p_{permutenum}/{chr_sex_options}/fst/{sex}/", "{fst_groups1}-{fst_groups2}.permutation_{permutenum}.Fst.table.txt"))
     shell:
         "python {params.scrpt} --frq1 {params.frq1} --frq2 {params.frq2} --p1 {params.p1} --p2 {params.p2} --dir {params.outdir}"
 
@@ -60,7 +62,7 @@ rule cpresults1:
         cmndir = os.path.join(config["out_dir"], "06_fst_permutations/permutations_merged/all_separated/chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2/{sex}/"),
         fn = os.path.join(config["out_dir"], "06_fst_permutations/p_{permutenum}/chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2/fst/{sex}/", "{fst_groups1}-{fst_groups2}.permutation_{permutenum}.Fst.table.txt")
     output:
-        os.path.join(config["out_dir"], "06_fst_permutations/permutations_merged/all_separated/chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2/{sex}/", "{fst_groups1}-{fst_groups2}.permutation_{permutenum}.Fst.table.txt")
+        temp(os.path.join(config["out_dir"], "06_fst_permutations/permutations_merged/all_separated/chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2/{sex}/", "{fst_groups1}-{fst_groups2}.permutation_{permutenum}.Fst.table.txt"))
     shell:
         "cp {params.fn} {output}"
 
@@ -78,6 +80,20 @@ rule mergeFstResults1:
         cat {params.indir}*.Fst.table.txt > {output};
         sed -i 's/.all.relatedsRemoved//g' {output}
         """
+
+rule plotFstResults1:
+    input:
+        fstresult = os.path.join(config["out_dir"], "06_fst_permutations/permutations_merged/chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2/{sex}/", "{fst_groups1}-{fst_groups2}.permutations_merged.Fst.results.txt")
+    params:
+        obfst = config["observed_fst"],
+        scripts_dir = config["scripts_dir"],
+        fstpath = os.path.join(config["out_dir"], "06_fst_permutations/permutations_merged/chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2/{sex}/"),
+        fstfnstem = os.path.join("{fst_groups1}-{fst_groups2}.permutations_merged.Fst.results"),
+        sex = config["sex"]
+    output:
+        os.path.join(config["out_dir"], "06_fst_permutations/permutations_merged/chr1-22.geno0.05.hwe1e-50.ALL.LD_50-10-0.2/{sex}/", "{fst_groups1}-{fst_groups2}.permutations_merged.Fst.results.pdf")
+    shell:
+        "Rscript plotPermutationDistribution.R {params.fstpath} {params.fstfnstem} {params.sex} {params.obfst} {params.fstpath}"
 
 
 '''# Merge all permutations into 1 table
