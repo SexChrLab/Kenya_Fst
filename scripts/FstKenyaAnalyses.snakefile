@@ -23,7 +23,11 @@ rule all:
         expand(os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/culture_territorial_section", "{chr_sex_options_full}.per.culture_territorial_section.Fst.results.txt"), chr_sex_options_full = config["chr_sex_options_full"]),
         expand(os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/population_ngibochoros_removed", "{chr_sex_options_full}.per.population_ngibochoros_removed.Fst.results.txt"), chr_sex_options_full = config["chr_sex_options_full"]),
         expand(os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/blood_clan_ngibochoros_removed", "{chr_sex_options_full}.per.blood_clan_ngibochoros_removed.Fst.results.txt"), chr_sex_options_full = config["chr_sex_options_full"]),
-        expand(os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/culture_clan_ngibochoros_removed", "{chr_sex_options_full}.per.culture_clan_ngibochoros_removed.Fst.results.txt"), chr_sex_options_full = config["chr_sex_options_full"])
+        expand(os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/culture_clan_ngibochoros_removed", "{chr_sex_options_full}.per.culture_clan_ngibochoros_removed.Fst.results.txt"), chr_sex_options_full = config["chr_sex_options_full"]),
+        expand(os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/blood_territorial_section_population", "{fst_TS_pop_blood_1}-{fst_TS_pop_2}.Fst.table.txt"),  zip, chr_sex_options_full = config["chr_sex_options_TS_pop_12"], fst_TS_pop_blood_1 = config["fst_TS_pop_blood_1"], fst_TS_pop_2 = config["fst_TS_pop_2"]),
+        expand(os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/culture_territorial_section_population", "{fst_TS_pop_culture_1}-{fst_TS_pop_2}.Fst.table.txt"), zip, chr_sex_options_full = config["chr_sex_options_TS_pop_12"], fst_TS_pop_culture_1 = config["fst_TS_pop_culture_1"], fst_TS_pop_2 = config["fst_TS_pop_2"]),
+        expand(os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/blood_territorial_section_population", "{chr_sex_options_full}.per.blood_territorial_section_population.Fst.results.txt"), chr_sex_options_full = config["chr_sex_options_full"]),
+        expand(os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/culture_territorial_section_population", "{chr_sex_options_full}.per.culture_territorial_section_population.Fst.results.txt"), chr_sex_options_full = config["chr_sex_options_full"])
 
 
 # convert all plink files to vcf. This command is the same for all chromosome
@@ -136,6 +140,36 @@ rule fstCultureTS:
     shell:
         "python {params.scrpt} --frq1 {input.frq1} --frq2 {input.frq2} --p1 {params.p1} --p2 {params.p2} --dir {params.outdir}"
 
+# Fst for blood territorial section vs each population
+rule fstBloodTSPops:
+    input:
+        frq1 = os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/frqs", "{fst_TS_pop_blood_1}.frq"),
+        frq2 = os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/frqs", "{fst_TS_pop_2}.frq")
+    params:
+        scrpt = config["scripts_dir"] + "/hudson.fst.py",
+        p1 = "{fst_TS_pop_blood_1}",
+        p2 = "{fst_TS_pop_2}",
+        outdir = os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/blood_territorial_section_population/")
+    output:
+        os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/blood_territorial_section_population", "{fst_TS_pop_blood_1}-{fst_TS_pop_2}.Fst.table.txt")
+    shell:
+        "python {params.scrpt} --frq1 {input.frq1} --frq2 {input.frq2} --p1 {params.p1} --p2 {params.p2} --dir {params.outdir}"
+
+# Fst for culture territorial section vs each population
+rule fstCultureTSPops:
+    input:
+        frq1 = os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/frqs", "{fst_TS_pop_culture_1}.frq"),
+        frq2 = os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/frqs", "{fst_TS_pop_2}.frq")
+    params:
+        scrpt = config["scripts_dir"] + "/hudson.fst.py",
+        p1 = "{fst_TS_pop_culture_1}",
+        p2 = "{fst_TS_pop_2}",
+        outdir = os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/culture_territorial_section_population/")
+    output:
+        os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/culture_territorial_section_population", "{fst_TS_pop_culture_1}-{fst_TS_pop_2}.Fst.table.txt")
+    shell:
+        "python {params.scrpt} --frq1 {input.frq1} --frq2 {input.frq2} --p1 {params.p1} --p2 {params.p2} --dir {params.outdir}"
+
 
 # Get allele frequencies for Turkana excluding Ngibochoros
 rule getAlleleFrqTurkanaNoNgibochoros:
@@ -243,4 +277,23 @@ rule mergeFstResults:
         sed -i 's/.all.relatedsRemoved//g' {output.o7};
         cat {params.pathrslt8}*.txt > {output.o8};
         sed -i 's/.all.relatedsRemoved//g' {output.o8}
+        """
+
+# add rule here to merge BTS-pop and CTS-pop results
+rule mergeFstResultsTSPop:
+    input:
+        r1 = expand(os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/blood_territorial_section_population", "{fst_TS_pop_blood_1}-{fst_TS_pop_2}.Fst.table.txt"),  zip, chr_sex_options_full = config["chr_sex_options_TS_pop_12"], fst_TS_pop_blood_1 = config["fst_TS_pop_blood_1"], fst_TS_pop_2 = config["fst_TS_pop_2"]),
+        r2 = expand(os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/culture_territorial_section_population", "{fst_TS_pop_culture_1}-{fst_TS_pop_2}.Fst.table.txt"), zip, chr_sex_options_full = config["chr_sex_options_TS_pop_12"], fst_TS_pop_culture_1 = config["fst_TS_pop_culture_1"], fst_TS_pop_2 = config["fst_TS_pop_2"])
+    params:
+        pathrslt1 = os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/blood_territorial_section_population/"),
+        pathrslt2 = os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/culture_territorial_section_population/")
+    output:
+        o1 = os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/blood_territorial_section_population", "{chr_sex_options_full}.per.blood_territorial_section_population.Fst.results.txt"),
+        o2 = os.path.join(config["out_dir"], "05_fst_new/{chr_sex_options_full}/fst/culture_territorial_section_population", "{chr_sex_options_full}.per.culture_territorial_section_population.Fst.results.txt")
+    shell:
+        """
+        cat {params.pathrslt1}*.txt > {output.o1};
+        sed -i 's/.all.relatedsRemoved//g' {output.o1};
+        cat {params.pathrslt2}*.txt > {output.o2};
+        sed -i 's/.all.relatedsRemoved//g' {output.o2}
         """
