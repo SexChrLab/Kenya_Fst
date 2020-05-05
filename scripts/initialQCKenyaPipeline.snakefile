@@ -120,6 +120,14 @@ rule all:
         expand(os.path.join(config["scratchdir"], "01_filtering_new/chr{chrs}/FEMALES/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.relatedsRm.chr{chrs}.setMaleHetsMissing.geno{geno}.hwe{hwe}.FEMALES.LD_{ldw}-{lds}-{ldr}.fam"),
                 chrs=config["xchromosome"], stm=config["kenya_array_file_stem_name"], geno=config["geno_filters"], hwe=config["HWE_filters"],
                 ldw=config["LDwindow"], lds=config["LDstep"],ldr=config["LDr2"]),
+        expand(os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setMaleHetsMissing.geno{geno}.hwe{hwe}.MALES.bed"), chrs=config["ychromosome"], stm=config["kenya_array_file_stem_name"], geno=config["geno_filters"], hwe=config["HWE_filters"]),
+        expand(os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setMaleHetsMissing.geno{geno}.hwe{hwe}.MALES.bim"), chrs=config["ychromosome"], stm=config["kenya_array_file_stem_name"], geno=config["geno_filters"], hwe=config["HWE_filters"]),
+        expand(os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setMaleHetsMissing.geno{geno}.hwe{hwe}.MALES.fam"), chrs=config["ychromosome"], stm=config["kenya_array_file_stem_name"], geno=config["geno_filters"], hwe=config["HWE_filters"]),
+        expand(os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/ALL/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setHetsMissing.geno{geno}.hwe{hwe}.ALL.bed"), chrs=config["mtDNA"], stm=config["kenya_array_file_stem_name"], geno=config["geno_filters"], hwe=config["HWE_filters"]),
+        expand(os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/ALL/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setHetsMissing.geno{geno}.hwe{hwe}.ALL.bim"), chrs=config["mtDNA"], stm=config["kenya_array_file_stem_name"], geno=config["geno_filters"], hwe=config["HWE_filters"]),
+        expand(os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/ALL/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setHetsMissing.geno{geno}.hwe{hwe}.ALL.fam"), chrs=config["mtDNA"], stm=config["kenya_array_file_stem_name"], geno=config["geno_filters"], hwe=config["HWE_filters"])
+
+
 
 # Perform initial site filtering steps.
 rule removeChr0:
@@ -608,4 +616,60 @@ rule LDfilterXChr:
 
         plink --bfile {params.xin3stem} --indep-pairwise {params.ldwindow} {params.ldstep} {params.ldrval} --out {params.xin3prunestem}
         plink --bfile {params.xin3stem} --exclude {params.xin3prune} --make-bed --out {params.xout3stem}
+        """
+
+
+# Here add site filtering steps for all samples, specifically for mtDNA and the
+# Y chromosomes. These will be input for haplogroup.assignments.sh
+rule filterYChromosomeAll:
+    input:
+        plkinbed = os.path.join(config["scratchdir"], "00_initialPlink/05_RemoveSamples/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.bed"),
+        plkinbim = os.path.join(config["scratchdir"], "00_initialPlink/05_RemoveSamples/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.bim"),
+        plkinfam = os.path.join(config["scratchdir"], "00_initialPlink/05_RemoveSamples/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.fam")
+    params:
+        chroms = "{chrs}",
+        genofilter = "{geno}",
+        hwefilter = "{hwe}",
+        instem = os.path.join(config["scratchdir"], "00_initialPlink/05_RemoveSamples/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd"),
+        stem1 = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}"),
+        stem2 = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setMaleHetsMissing"),
+        stem3 = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setMaleHetsMissing.geno{geno}"),
+        stem4 = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setMaleHetsMissing.geno{geno}.hwe{hwe}.MALES"),
+    output:
+        plinkoutbed = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setMaleHetsMissing.geno{geno}.hwe{hwe}.MALES.bed"),
+        plinkoutbim = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setMaleHetsMissing.geno{geno}.hwe{hwe}.MALES.bim"),
+        plinkoutfam = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setMaleHetsMissing.geno{geno}.hwe{hwe}.MALES.fam")
+    shell:
+        """
+        plink --bfile {params.instem} --chr {params.chroms} --filter-males --make-bed --out {params.stem1}
+        plink --bfile {params.stem1} --set-hh-missing --make-bed --out {params.stem2}
+        plink --bfile {params.stem2} --geno {params.genofilter} --make-bed --out {params.stem3}
+        plink --bfile {params.stem3} --hwe {params.hwefilter} --output-chr M --make-bed --out {params.stem4}
+        """
+
+
+rule filterMtDNAAll:
+    input:
+        plkinbed = os.path.join(config["scratchdir"], "00_initialPlink/05_RemoveSamples/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.bed"),
+        plkinbim = os.path.join(config["scratchdir"], "00_initialPlink/05_RemoveSamples/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.bim"),
+        plkinfam = os.path.join(config["scratchdir"], "00_initialPlink/05_RemoveSamples/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.fam")
+    params:
+        chroms = "{chrs}",
+        genofilter = "{geno}",
+        hwefilter = "{hwe}",
+        instem = os.path.join(config["scratchdir"], "00_initialPlink/05_RemoveSamples/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd"),
+        stem1 = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/ALL/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}"),
+        stem2 = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/ALL/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setHetsMissing"),
+        stem3 = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/ALL/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setHetsMissing.geno{geno}"),
+        stem4 = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/ALL/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setHetsMissing.geno{geno}.hwe{hwe}.ALL"),
+    output:
+        plinkoutbed = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/ALL/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setHetsMissing.geno{geno}.hwe{hwe}.ALL.bed"),
+        plinkoutbim = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/ALL/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setHetsMissing.geno{geno}.hwe{hwe}.ALL.bim"),
+        plinkoutfam = os.path.join(config["scratchdir"], "01_filtering_new/all_samples/chr{chrs}/ALL/{stm}.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.smplsRmvd.chr{chrs}.setHetsMissing.geno{geno}.hwe{hwe}.ALL.fam"),
+    shell:
+        """
+        plink --bfile {params.instem} --chr {params.chroms} --make-bed --out {params.stem1}
+        plink --bfile {params.stem1} --set-mixed-mt-missing --make-bed --out {params.stem2}
+        plink --bfile {params.stem2} --geno {params.genofilter} --make-bed --out {params.stem3}
+        plink --bfile {params.stem3} --hwe {params.hwefilter} --output-chr M --make-bed --out {params.stem4}
         """
