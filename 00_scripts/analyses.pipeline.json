@@ -1,0 +1,137 @@
+{
+  "kenya_array_file_dir": "/data/CEM/wilsonlab/lab_generated/kenya/plink/dna/array/melisa_wilson/",
+  "kenya_array_file_stem_name": "melissa_wilson.raw",
+  "scratchdir": "/scratch/amtarave/Kenya_Fst/",
+  "srptdir": "/scratch/amtarave/Kenya_Fst/00_scripts/",
+
+  "geno_filters": "0.05",
+  "HWE_filters": "1e-50",
+  "MAF_filters": "0.05",
+  "LDwindow": "50",
+  "LDstep": "10",
+  "LDr2": "0.2" ,
+
+  "sex_info_file": "/scratch/amtarave/Kenya_Fst/00_lists/sample_info/self_reported_sex_info.txt",
+  "sex_descrepencies_file": "/scratch/amtarave/Kenya_Fst/00_lists/remove_lists/samplesSexDiscrepencies.txt",
+  "sex_descrepencies_related_indv_file": "/scratch/amtarave/Kenya_Fst/00_lists/remove_lists/samplesAllRm.txt",
+  "related_indv_file": "/scratch/amtarave/Kenya_Fst/00_lists/remove_lists/samplesRelatedIdentical.txt",
+  "DNA_concentrations": "/scratch/amtarave/Kenya_Fst/00_lists/other/DNA.conc.per.ind.txt",
+  "outlier_dir":"/scratch/amtarave/Kenya_Fst/00_lists/remove_lists/",
+  "outlier_01_fn":"outliers.01.txt",
+  "outlier_02_fn":"outliers.02.txt",
+  "outlier_all_fn":"outliers.all.txt",
+  "sample_info_fn": "/scratch/amtarave/Kenya_Fst/00_lists/sample_info/kenya.snp.array.metadata.csv",
+  "geo_dis_dir": "/scratch/amtarave/Kenya_Fst/00_other_data/geo_dists/",
+  "map_dis_dir_fn": "/scratch/amtarave/Kenya_Fst/00_other_data/avg_geo_dists/average.coords.for.map.txt",
+
+  "autosomes": "1-22",
+  "sexchromosomes": ["23", "24"],
+  "xchromosome" : "23",
+  "ychromosome": "24",
+  "mtDNA": "26",
+
+  "runs":["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+  "kvalues":["1", "2", "3", "4", "5"],
+
+  "fst_lists": "/scratch/amtarave/Kenya_Fst/00_lists/fst_lists/",
+
+  "all_combos": [
+    "borana",
+    "rendille",
+    "samburu",
+    "turkana",
+
+    "ldupsai.blood.clan",
+    "saale.blood.clan",
+    "lpisikishu.blood.clan",
+    "lukumai.blood.clan",
+    "noonituu.blood.clan",
+    "warrajidaa.blood.clan",
+    "ngidoca.blood.clan",
+    "ngipongaa.blood.clan",
+    "ngisiger.blood.clan",
+
+    "ldupsai.cultural.clan",
+    "saale.cultural.clan",
+    "lpisikishu.cultural.clan",
+    "lukumai.cultural.clan",
+    "noonituu.cultural.clan",
+    "warrajidaa.cultural.clan",
+    "ngidoca.cultural.clan",
+    "ngipongaa.cultural.clan",
+    "ngisiger.cultural.clan",
+
+    "kwatela.blood.ts",
+    "ngibochoros.blood.ts",
+    "ngiyapakuno.blood.ts",
+
+    "kwatela.cultural.ts",
+    "ngibochoros.cultural.ts",
+    "ngiyapakuno.cultural.ts"
+  ],
+
+  "fst_groups_1": [
+    "borana", "borana", "borana", "rendille", "rendille", "samburu",
+
+    "ldupsai.blood.clan", "lpisikishu.blood.clan", "noonituu.blood.clan",
+    "ngidoca.blood.clan", "ngidoca.blood.clan", "ngipongaa.blood.clan",
+
+    "kwatela.blood.ts", "kwatela.blood.ts", "ngibochoros.blood.ts",
+
+    "ldupsai.cultural.clan", "lpisikishu.cultural.clan", "noonituu.cultural.clan",
+    "ngidoca.cultural.clan", "ngidoca.cultural.clan", "ngipongaa.cultural.clan",
+
+    "kwatela.cultural.ts", "kwatela.cultural.ts", "ngibochoros.cultural.ts",
+
+    "kwatela.blood.ts", "kwatela.blood.ts", "kwatela.blood.ts",
+    "ngibochoros.blood.ts", "ngibochoros.blood.ts", "ngibochoros.blood.ts",
+    "ngiyapakuno.blood.ts", "ngiyapakuno.blood.ts", "ngiyapakuno.blood.ts",
+
+    "kwatela.cultural.ts", "kwatela.cultural.ts", "kwatela.cultural.ts",
+    "ngibochoros.cultural.ts", "ngibochoros.cultural.ts", "ngibochoros.cultural.ts",
+    "ngiyapakuno.cultural.ts", "ngiyapakuno.cultural.ts", "ngiyapakuno.cultural.ts"
+
+  ],
+
+  "fst_groups_2": [
+    "rendille", "samburu", "turkana", "samburu", "turkana", "turkana",
+
+    "saale.blood.clan", "lukumai.blood.clan", "warrajidaa.blood.clan",
+    "ngipongaa.blood.clan", "ngisiger.blood.clan", "ngisiger.blood.clan",
+
+    "ngibochoros.blood.ts", "ngiyapakuno.blood.ts", "ngiyapakuno.blood.ts",
+
+    "saale.cultural.clan", "lukumai.cultural.clan", "warrajidaa.cultural.clan",
+    "ngipongaa.cultural.clan", "ngisiger.cultural.clan", "ngisiger.cultural.clan",
+
+    "ngibochoros.cultural.ts", "ngiyapakuno.cultural.ts", "ngiyapakuno.cultural.ts",
+
+    "borana", "rendille", "samburu",
+    "borana", "rendille", "samburu",
+    "borana", "rendille", "samburu",
+
+    "borana", "rendille", "samburu",
+    "borana", "rendille", "samburu",
+    "borana", "rendille", "samburu",
+  ],
+
+  "geo_dist_1": [
+    "borana", "borana", "borana", "rendille", "rendille", "samburu",
+
+    "ldupsai", "lpisikishu", "noonituu",
+    "ngidoca", "ngidoca", "ngipongaa",
+
+    "kwatela", "kwatela", "ngibochoros"
+
+  ],
+
+  "geo_dist_2": [
+    "rendille", "samburu", "turkana", "samburu", "turkana", "turkana",
+
+    "saale", "lukumai", "warrajidaa",
+    "ngipongaa", "ngisiger", "ngisiger",
+
+    "ngibochoros", "ngiyapakuno", "ngiyapakuno"
+  ]
+
+}
