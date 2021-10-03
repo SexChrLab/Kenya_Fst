@@ -5,7 +5,7 @@
 
 # Description:
 # This script will make the main figure 5 plot for the manuscript.
-# Figure 5 will have 8 panels, these are pairwise correlation plots.
+# Figure 5 will have 6 panels, these are pairwise correlation plots.
 
 
 #--------------------#
