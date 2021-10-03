@@ -1,0 +1,23 @@
+{
+  "scripts_dir": "/scratch/amtarave/Kenya_Fst/00_scripts/",
+  "out_dir": "/scratch/amtarave/Kenya_Fst/05_analyses/",
+  "vcf_auto": "/scratch/amtarave/Kenya_Fst/05_analyses/03_fst/01_autosomes/vcf/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.rmSmpls01.relatedsRm.noPCAoutliers.chr1-22.geno0.05.hwe1e-50.LD_50-10-0.2.convert.vcf",
+  "keep_dir": "/scratch/amtarave/Kenya_Fst/00_lists/permutation_lists/permuted_lists/",
+
+  "combo": [
+    "ngiyapakuno_kwatela"
+  ],
+  "combo_pop": [
+    "ngiyapakuno", "kwatela"
+  ],
+
+  "borana_frq": "/scratch/amtarave/Kenya_Fst/05_analyses/03_fst/01_autosomes/frqs/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.rmSmpls01.relatedsRm.noPCAoutliers.chr1-22.geno0.05.hwe1e-50.LD_50-10-0.2.convert.borana.frq",
+  "rendille_frq": "/scratch/amtarave/Kenya_Fst/05_analyses/03_fst/01_autosomes/frqs/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.rmSmpls01.relatedsRm.noPCAoutliers.chr1-22.geno0.05.hwe1e-50.LD_50-10-0.2.convert.rendille.frq",
+  "samburu_frq": "/scratch/amtarave/Kenya_Fst/05_analyses/03_fst/01_autosomes/frqs/melissa_wilson.raw.noChr0.noINDELS.noMissMatchDupSites.mergeMatchDups.sexUpdate.rmSmpls01.relatedsRm.noPCAoutliers.chr1-22.geno0.05.hwe1e-50.LD_50-10-0.2.convert.samburu.frq",
+
+
+  "observed_fst_abs_diff_borana": 0.00102796737,
+  "observed_fst_abs_diff_rendille": 0.0009776978683,
+  "observed_fst_abs_diff_samburu": 0.0006688261884
+
+}
